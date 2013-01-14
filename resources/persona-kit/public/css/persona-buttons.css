@@ -38,6 +38,8 @@
   background: -o-linear-gradient(top, #3788b9, #21669f);
   background: -webkit-linear-gradient(top, #3788b9, #21669f);
   background: linear-gradient(top, #3788b9, #21669f);
+  color: #fff;
+  text-decoration: none;
 }
 
 .persona-button:active, .persona-button:focus{
@@ -173,6 +175,8 @@
   background: -o-linear-gradient(top, #484848, #2d2d2d);
   background: -webkit-linear-gradient(top, #484848, #2d2d2d);
   background: linear-gradient(top, #484848, #2d2d2d);
+  color: #fff;
+  text-decoration: none;
 }
 .persona-button.dark span:before{ /* Icon BG */
   background: #d34f2d;
@@ -209,6 +213,8 @@
   background: -o-linear-gradient(top, #cb6216, #b12a13);
   background: -webkit-linear-gradient(top, #cb6216, #b12a13);
   background: linear-gradient(top, #cb6216, #b12a13);
+  color: #fff;
+  text-decoration: none;
 }
 .persona-button.orange span:before{ /* Icon BG */
   background: #e84a21;
