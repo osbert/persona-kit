@@ -25,11 +25,12 @@ Note to get a full implementation you still have to:
 
 * Use the results of identity verification to set some session state.
 
+A credential function, workflow, and middleware are defined in
+persona-kit.friend to integrate cleanly with cemerick/friend to
+accomplish the above.
+
 * Implement browser side logic to handle login/logout button events,
   onlogin, onlogout, and supply loggedInUser to navigator.watch().
-
-Unfortunately, most applications will vary in how these are
-accomplished, so it is considered beyond the scope of this library.
 
 ## Usage
 
