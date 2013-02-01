@@ -1,13 +1,11 @@
 (ns persona-kit.friend
   "Friend workflow, credential function, and middleware for Mozilla Persona."
+  (:require [cemerick.friend :as friend]
+            [cemerick.friend.workflows :as workflows]
+            [compojure.core :as c]
+            [ring.util.response :as r])
   (:use [persona-kit.core :only [valid? verify-assertion]]
-        [cemerick.friend :as friend]
-        [cemerick.friend.workflows :as workflows]
-        [compojure.core :as c]
-        [ring.util.response :as r]))
-
-(def *login-uri* "/login")
-(def *logout-uri* "/logout")
+        [persona-kit.uris :only [*login-uri* *logout-uri*]]))
 
 (defn credential-fn [{:keys [email] :as credential-map}]
   (when (valid? credential-map)

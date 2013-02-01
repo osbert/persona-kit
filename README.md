@@ -32,6 +32,10 @@ accomplish the above.
 * Implement browser side logic to handle login/logout button events,
   onlogin, onlogout, and supply loggedInUser to navigator.watch().
 
+If you use persona-kit.friend and ClojureScript, there are useful
+functions defined in src/cljs/persona_kit/core.cljs to bind Persona
+related functionality to your UI elements.
+
 ## Usage
 
 ```Clojure
