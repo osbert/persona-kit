@@ -1,5 +1,9 @@
 # persona-kit
 
+TODO: Ensure SSL certificates are verified, force CSRF protection middleware.
+
+NOTE: Until the above security concerns are checked this library should not be used in production.
+
 A Clojure micro-library designed to make it easier to implement
 Mozilla Persona for user authentication:
 
