@@ -5,29 +5,8 @@
             [clojure.data.json :as j]
             [clj-http.client :as http]
             [compojure.route :as r]
-            [compojure.core :as c]))
-
-(defn include-persona
-  "Add persona CSS styles and JS functions to page."
-  []
-  (list (p/include-css "/persona-kit/css/persona-buttons.css")
-        (p/include-js "https://login.persona.org/include.js")))
-
-(defn wrap-persona-resources
-  "Ring middleware to handle persona resource requests."
-  [handler]
-  (->> handler
-       (c/routes (r/resources "/persona-kit" {:root "persona-kit/public"}))))
-
-(d/defelem sign-in-button
-  "Create a persona sign-in button.  Variant can be :dark or :orange."
-  [& [variant]]
-  [:a {:href "#"
-       :class (s/join " "
-                      (remove nil?
-                              ["persona-button"
-                               (if variant (name variant))]))}
-   [:span "Sign in with your Email"]])
+            [compojure.core :as c])
+  (:use [persona-kit middleware view]))
 
 (defn verify-assertion
   "Return the raw verification response as a map."
