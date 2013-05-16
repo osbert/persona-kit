@@ -15,9 +15,11 @@
                  [shoreleave/shoreleave-remote "0.3.0"]
                  [domina "1.0.2-SNAPSHOT"]
                  [crate "0.2.4"]]
-  :dev-dependencies [[jline "0.9.94"]
-                     [marginalia "0.7.0-SNAPSHOT"]
-                     [lein-marginalia "0.7.0-SNAPSHOT"]]
+  :profiles {:dev {:dependencies [[jline "0.9.94"]
+                                  [marginalia "0.7.0-SNAPSHOT"]
+                                  [lein-marginalia "0.7.0-SNAPSHOT"]
+                                  [ring-mock "0.1.4"]]}}
+
   :plugins [[lein-cljsbuild "0.3.2" :exclusions [org.clojure/clojure]]]
   :min-lein-version "2.0.0"
   :hooks [leiningen.cljsbuild]
