@@ -9,7 +9,7 @@
                  [compojure "1.1.5"]
                  [com.cemerick/friend "0.1.5" :exclusions [org.clojure/core.incubator org.apache.httpcomponents/httpclient ring/ring-core slingshot]]
 
-                 ; ClojureScript dependencies
+                 ;; ClojureScript dependencies
                  [org.clojure/clojurescript "0.0-1806"]
                  [shoreleave/shoreleave-remote "0.3.0"]
                  [domina "1.0.2-SNAPSHOT"]
