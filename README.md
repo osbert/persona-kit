@@ -1,9 +1,5 @@
 # persona-kit
 
-TODO: Force CSRF protection middleware.
-
-NOTE: Until the above security concerns are checked this library should not be used in production.
-
 A Clojure micro-library designed to make it easier to implement
 Mozilla Persona for user authentication:
 
@@ -25,7 +21,9 @@ Mozilla Persona for user authentication:
 
 Note to get a full implementation you still have to:
 
-* Expose a route so clients can call verify-assertion.
+* Expose a route so clients can call verify-assertion. (Be sure to
+  protect yourself from CSRF, persona-kit.friend includes
+  weavejester/ring-anti-forgery).
 
 * Use the results of identity verification to set some session state.
 
