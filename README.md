@@ -61,12 +61,23 @@ related functionality to your UI elements.
                          [:body (i/sign-in-button)])))
 
 
-;; Add wrap-persona as middleware to handle CSS resource request.
+;; Add wrap-persona-resources as middleware to handle CSS resource request.
 (def app (-> (h/site app-routes)
-             (i/wrap-persona)))
+             (i/wrap-persona-resources)))
 
 ;; To aid in identify verification, use verify-assertion and valid? as
 ;; appropriate for your particular workflow.
+
+
+;; Server side cemerick/friend example
+(require '[persona.friend :as pf])
+(require '[cemerick.friend :as f])
+
+(def app (-> (h/site app-routes)
+             (i/wrap-persona-resources)
+             (pf/wrap-persona-friend)
+             (f/authenticate {:credential-fn pf/credential-fn
+                              :workflows [(partial pf/persona-workflow "http://YOUR_AUDIENCE")]})))
  ```
 
 ## License
