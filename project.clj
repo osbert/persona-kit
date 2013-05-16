@@ -1,4 +1,4 @@
-(defproject persona-kit "0.1.1-SNAPSHOT"
+(defproject persona-kit "0.1.2-SNAPSHOT"
   :description "Starter kit for Mozilla Persona login system for Clojure using Hiccup, cemerick/friend."
   :url "http://github.com/osbert/persona-kit"
   :license {:name "Eclipse Public License"
