@@ -1,6 +1,6 @@
 # persona-kit
 
-TODO: Ensure SSL certificates are verified, force CSRF protection middleware.
+TODO: Force CSRF protection middleware.
 
 NOTE: Until the above security concerns are checked this library should not be used in production.
 
