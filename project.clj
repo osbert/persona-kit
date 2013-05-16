@@ -20,16 +20,15 @@
   :plugins [[lein-cljsbuild "0.3.2" :exclusions [org.clojure/clojure]]]
   :min-lein-version "2.0.0"
   :hooks [leiningen.cljsbuild]
-  :cljsbuild {:crossovers [persona-kit.uris]
-              :crossover-path "out/cljs"
-              :crossover-jar true
-              :builds [{
-                        :jar true
-                        ;; The path to the top-level ClojureScript source directory:
-                        :source-path "src/cljs"
-                        ;; The standard ClojureScript compiler options:
-                        ;; (See the ClojureScript compiler documentation for details.)
-                        :compiler {
-                                   :output-to "resources/persona-kit/public/js/persona-kit.js"
-                                   :optimizations :whitespace
-                                   :pretty-print true}}]})
+  :cljsbuild {:builds
+              [{:source-paths ["src/cljs"],
+                :compiler
+                {:pretty-print true,
+                 :output-to "resources/persona-kit/public/js/persona-kit.js",
+                 :optimizations :whitespace},
+                :jar true}],
+              :crossovers [persona-kit.uris],
+              :crossover-jar true,
+              :crossover-path "out/cljs"}
+
+  )
