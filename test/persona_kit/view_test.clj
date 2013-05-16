@@ -14,3 +14,12 @@
     (testing "starts with an anchor"
       (is (re-find #"^<a" html-string)))))
 
+(deftest include-persona-test
+  (testing "returns a list"
+    (is (list? (include-persona))))
+
+  (testing "can be converted to HTML by hiccup"
+    (is (string? (hiccup/html (include-persona)))))
+
+  (testing "starts with link"
+    (is (re-find #"^<link" (hiccup/html (include-persona))))))
