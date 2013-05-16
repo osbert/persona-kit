@@ -8,6 +8,7 @@
                  [clj-http "0.7.2" :exclusions [commons-codec]]
                  [compojure "1.1.5" :exclusions [ring/ring-core]]
                  [com.cemerick/friend "0.1.5" :exclusions [org.clojure/core.incubator org.apache.httpcomponents/httpclient slingshot]]
+                 [ring-anti-forgery "0.2.1" :exclusions [org.clojure/clojure hiccup]]
 
                  ;; ClojureScript dependencies
                  [org.clojure/clojurescript "0.0-1806"]
