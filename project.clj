@@ -6,8 +6,8 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [hiccup "1.0.3"]
                  [clj-http "0.7.2" :exclusions [commons-codec]]
-                 [compojure "1.1.5"]
-                 [com.cemerick/friend "0.1.5" :exclusions [org.clojure/core.incubator org.apache.httpcomponents/httpclient ring/ring-core slingshot]]
+                 [compojure "1.1.5" :exclusions [ring/ring-core]]
+                 [com.cemerick/friend "0.1.5" :exclusions [org.clojure/core.incubator org.apache.httpcomponents/httpclient slingshot]]
 
                  ;; ClojureScript dependencies
                  [org.clojure/clojurescript "0.0-1806"]
